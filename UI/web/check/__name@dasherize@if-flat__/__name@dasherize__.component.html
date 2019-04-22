@@ -1,0 +1,48 @@
+<p>
+  <%= dasherize(name) %> works!
+</p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../home">{{ 'commonPart.title_homepage' | translate }}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">
+      {{ '<%= classify(name) %>.title_<%= classify(name) %>' | translate }}</li>
+  </ol>
+</nav>
+
+<div class="container">
+
+  <div class="card form" id="form1">
+    <div class="card-header">
+      <h3>{{ '<%= classify(name) %>.title_<%= classify(name) %>' | translate }}</h3>
+    </div>
+    <br>
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="exampleInputPassword1">名称</label>
+            <input class="form-control" disabled="disabled">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="exampleInputPassword1">日 期</label>
+            <input class="form-control" disabled="disabled">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="row">
+          <div class="col">
+            <nav class="navbar navbar-light bg-white justify-content-end">
+              <button type="submit" class="btn btn-primary btn-blue mr-2"
+                (click)="editData()">{{ 'commonPart.btn_saveData' | translate }}</button>
+              <button type="reset" class="btn btn-general btn-white"
+                (click)="closePage()">{{ 'commonPart.btn_closePage' | translate }}</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
